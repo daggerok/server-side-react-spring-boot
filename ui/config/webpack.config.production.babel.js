@@ -4,7 +4,8 @@
 import config from './webpack.config.babel';
 import webpack from 'webpack';
 
-config.devtool = '#source-map';
+// config.devtool = '#source-map';
+config.devtool = false;
 config.plugins = [
   ...config.plugins,
   new webpack.DefinePlugin({

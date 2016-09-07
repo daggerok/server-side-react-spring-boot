@@ -40,13 +40,27 @@ class App extends Component {
   }
 }
 
-render(
-  <Router history={browserHistory}>
-    <Route path="/" component={App}>
-      <IndexRoute component={Main}/>
-      <Route path="home" component={Main}/>
-      <Route path="*" component={NotFound}/>
-    </Route>
-  </Router>,
-  document.getElementById('app')
-);
+window.renderClient = function() {
+// const renderClient = (comments) => {
+// const data = comments || [];
+  return render(
+    <Router history={browserHistory}>
+      <Route path="/" component={App}>
+        <IndexRoute component={Main}/>
+        <Route path="home" component={Main}/>
+        <Route path="*" component={NotFound}/>
+      </Route>
+    </Router>,
+    document.getElementById('app')
+  );
+};
+
+import { renderToString } from 'react-dom/server'
+window.renderServer = function() {
+// const renderServer = (comments) => {
+// const data = Java.from(comments);
+  return renderToString(<App><NotFound/></App>);
+};
+
+import $ from 'jquery';
+window.$ = $;

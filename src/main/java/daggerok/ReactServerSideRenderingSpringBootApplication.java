@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ReactSpringBootApplication {
+public class ReactServerSideRenderingSpringBootApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ReactSpringBootApplication.class, args);
+        SpringApplication.run(ReactServerSideRenderingSpringBootApplication.class, args);
     }
 }

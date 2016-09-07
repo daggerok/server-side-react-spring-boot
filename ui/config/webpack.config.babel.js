@@ -11,11 +11,11 @@ const assetsInclude   = [path.resolve(process.cwd(), './src/assets')];
 const bsInclude = [path.resolve(process.cwd(), './node_modules/bootstrap/dist')];
 const config = {
   entry: {
-    app: ['babel-polyfill', './src/main.js']
+    app: './src/main.js'
   },
   output: {
     path: '../src/main/resources/static',
-    filename: '/[name].[hash].js',
+    filename: '/[name].js',
     sourceMapFilename: 'maps/[file].map'
   },
   module: {
@@ -73,7 +73,7 @@ const config = {
     modulesDirectories: ['node_modules']
   },
   plugins: [
-    new ExtractPlugin('/[name].[hash].css', { allChunks: true }),
+    new ExtractPlugin('/[name].css', { allChunks: true }),
     new HtmlWebpackPlugin({ template: './src/assets/index.hbs' })
   ],
   postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ],

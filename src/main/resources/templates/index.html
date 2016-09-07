@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>fast-react-starter</title>
+  <link href="/app.css" rel="stylesheet"></head>
+<body>
+<!-- 1) render data from backend server side (see daggerok.react.ReactServerSideRenderingController.index) -->
+<div id="app">{{{data}}}</div>
+<script type="text/javascript" src="/app.js"></script>
+<!-- 2) up and running dynamic part of site after it static initial page pf app was loader -->
+<script type="text/javascript">
+  $(function() {
+    renderClient();
+  });
+</script>
+</body>
+</html>

@@ -58,8 +58,8 @@
     "webpack-dev-server": "*"
   },
   "dependencies": {
-    "babel-polyfill": "*",
     "bootstrap": "*",
+    "jquery": "*",
     "react": "*",
     "react-dom": "*",
     "react-router": "*"
