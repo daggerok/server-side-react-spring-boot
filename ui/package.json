@@ -47,7 +47,7 @@
     "json-server": "*",
     "less": "*",
     "less-loader": "*",
-    "npm-run-all": "^3.1.0",
+    "npm-run-all": "*",
     "opn-cli": "*",
     "postcss-loader": "*",
     "rimraf": "*",

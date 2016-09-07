@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <title>fast-react-starter</title>
+  {{htmlWebpackPlugin.options.files.css}}
 </head>
 <body>
-<div id="app"></div>
-<!--
+<!-- 1) render data from backend server side (see daggerok.react.ReactServerSideRenderingController.index) -->
+<div id="app">{{{data}}}</div>
+{{htmlWebpackPlugin.options.files.js}}
+<!-- 2) up and running dynamic part of application after it static initial page was loader -->
 <script type="text/javascript">
-  $(function () {
+  $(function() {
+    // renderClient({{response}});
     renderClient();
   });
 </script>
--->
 </body>
 </html>

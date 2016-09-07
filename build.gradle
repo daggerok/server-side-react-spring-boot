@@ -38,3 +38,8 @@ build.shouldRunAfter ui
 task wrapper(type: Wrapper) {
   gradleVersion = '3.0'
 }
+
+// bash build/libs/*.jar
+springBoot {
+  executable = true
+}

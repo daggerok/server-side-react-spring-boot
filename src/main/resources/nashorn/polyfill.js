@@ -1,5 +1,4 @@
 var window = this;
-var global = this;
 var console = {};
 
 console.error = print;

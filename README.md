@@ -5,6 +5,7 @@ build
 
 ```fish
 gradle ui build
+bash build/libs/*.jar
 ```
 
 backend development

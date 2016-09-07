@@ -40,9 +40,9 @@ class App extends Component {
   }
 }
 
-window.renderClient = function() {
-// const renderClient = (comments) => {
-// const data = comments || [];
+global.renderClient = function() {
+// const renderClient = (data) => {
+// const data = data || [];
   return render(
     <Router history={browserHistory}>
       <Route path="/" component={App}>
@@ -56,10 +56,10 @@ window.renderClient = function() {
 };
 
 import { renderToString } from 'react-dom/server'
-window.renderServer = function() {
-// const renderServer = (comments) => {
-// const data = Java.from(comments);
-  return renderToString(<App><NotFound/></App>);
+global.renderServer = function() {
+// const renderServer = (data) => {
+// const data = Java.from(data);
+  return renderToString(<App><Main/></App>);
 };
 
 import $ from 'jquery';
