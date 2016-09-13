@@ -22,9 +22,11 @@ repositories { jcenter() }
 dependencies {
   compile 'org.springframework.boot:spring-boot-starter-actuator',
           'org.springframework.boot:spring-boot-starter-mustache',
+          'org.springframework.boot:spring-boot-starter-data-rest',
+          'org.springframework.boot:spring-boot-starter-data-jpa',
           'org.springframework.boot:spring-boot-devtools',
           'org.projectlombok:lombok'
-
+  runtime 'com.h2database:h2'
   testCompile 'org.springframework.boot:spring-boot-starter-test'
 }
 

@@ -59,7 +59,7 @@ const config = {
       include: bsInclude,
       loader: 'url?limit=4096&mimetype=application/octet-stream'
     }, {
-      test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+      test: /\.(ico|svg)(\?v=\d+\.\d+\.\d+)?$/,
       include: bsInclude,
       loader: 'url?limit=4096&mimetype=image/svg+xml'
     }, {
@@ -74,7 +74,10 @@ const config = {
   },
   plugins: [
     new ExtractPlugin('/[name].css', { allChunks: true }),
-    new HtmlWebpackPlugin({ template: './src/assets/index.hbs' })
+    new HtmlWebpackPlugin({
+      template: './src/assets/index.hbs',
+      favicon: './src/assets/favicon.ico'
+    })
   ],
   postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ],
   devtool: '#cheap-module-inline-source-map',

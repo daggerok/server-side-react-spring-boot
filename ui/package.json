@@ -61,8 +61,7 @@
     "bootstrap": "*",
     "jquery": "*",
     "react": "*",
-    "react-dom": "*",
-    "react-router": "*"
+    "react-dom": "*"
   },
   "babel": {
     "presets": [

@@ -2,12 +2,11 @@
  * Created by mak on 9/6/16.
  */
 import React from 'react';
-import { Link } from 'react-router';
 
 export default () => (
   <ul>
-    <li><Link to="/">root</Link></li>
-    <li><Link to="/home">home</Link></li>
-    <li><Link to="/not-found">not-found</Link></li>
+    <li><a href="/">root</a></li>
+    <li><a href="/">home</a></li>
+    <li><a href="/not-found">not-found</a></li>
   </ul>
 );

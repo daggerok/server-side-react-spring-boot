@@ -1,6 +1,9 @@
 package daggerok.react;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import daggerok.domain.PostRestRepository;
+import lombok.SneakyThrows;
+import lombok.val;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,11 +14,24 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ReactServerSideRenderingController {
 
-    @Autowired React react;
+    final React react;
+    final PostRestRepository postRestRepository;
+    final ObjectMapper objectMapper;
+
+    public ReactServerSideRenderingController(React react,
+                                              PostRestRepository postRestRepository,
+                                              ObjectMapper objectMapper) {
+        this.react = react;
+        this.postRestRepository = postRestRepository;
+        this.objectMapper = objectMapper;
+    }
 
     @GetMapping("/")
+    @SneakyThrows
     public String index(Model model) {
-        model.addAttribute("data", react.renderApp());
+        val posts = postRestRepository.findAll();
+        model.addAttribute("data", react.renderApp(posts));
+        model.addAttribute("posts", objectMapper.writeValueAsString(posts));
         return "index";
     }
 }

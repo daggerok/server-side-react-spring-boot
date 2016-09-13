@@ -5,9 +5,6 @@ import './assets';
 
 import React, { Component } from "react";
 import { render } from "react-dom";
-import { Router, Route, IndexRoute, browserHistory, Link } from 'react-router';
-
-import NotFound from "./components/NotFound";
 import Main from "./components/Main";
 
 class App extends Component {
@@ -40,26 +37,20 @@ class App extends Component {
   }
 }
 
-global.renderClient = function() {
-// const renderClient = (data) => {
-// const data = data || [];
+global.renderClient = function(json) {
+  const posts = json || [];
+  // console.log('client posts', JSON.stringify(posts));
   return render(
-    <Router history={browserHistory}>
-      <Route path="/" component={App}>
-        <IndexRoute component={Main}/>
-        <Route path="home" component={Main}/>
-        <Route path="*" component={NotFound}/>
-      </Route>
-    </Router>,
+    <App><Main posts={posts}/></App>,
     document.getElementById('app')
   );
 };
 
 import { renderToString } from 'react-dom/server'
-global.renderServer = function() {
-// const renderServer = (data) => {
-// const data = Java.from(data);
-  return renderToString(<App><Main/></App>);
+global.renderServer = function(java) {
+  const posts = Java.from(java || []);
+  // console.log('server posts', posts);
+  return renderToString(<App><Main posts={posts}/></App>);
 };
 
 import $ from 'jquery';
