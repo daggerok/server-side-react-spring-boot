@@ -29,7 +29,7 @@ const config = {
       include,
       loader: 'babel',
       query: {
-        presets: ['stage-0', 'es2015', 'react'],
+        presets: ['env', 'react', 'stage-0'],
         plugins: ['react-html-attrs', 'add-module-exports', 'transform-class-properties']
       }
     }, {

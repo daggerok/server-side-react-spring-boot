@@ -11,9 +11,11 @@
 <script src="{{springMacroRequestContext.request.contextPath}}/app.js"></script>
 <!-- 2) up and running dynamic part of application after it static initial page was loader -->
 <script type="text/javascript">
-  $(function() {
-    renderClient({{{json}}});
-  });
+  (function() {
+    document.addEventListener('DOMContentLoaded', function onDOMContentLoaded() {
+      renderClient();
+    }, false);
+  })();
 </script>
 </body>
 </html>
