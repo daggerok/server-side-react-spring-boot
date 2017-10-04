@@ -52,6 +52,3 @@ global.renderServer = function(java) {
   // console.log('server posts', posts);
   return renderToString(<App><Main posts={posts}/></App>);
 };
-
-import $ from 'jquery';
-window.$ = $;

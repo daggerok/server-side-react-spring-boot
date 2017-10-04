@@ -18,7 +18,7 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
  * Created by mak on 9/7/16.
  */
 @Slf4j
-@Controller
+//@Controller
 @RequiredArgsConstructor
 public class FallbackHandler implements ErrorController {
 

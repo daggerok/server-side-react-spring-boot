@@ -7,7 +7,8 @@
   <link href="{{springMacroRequestContext.request.contextPath}}/app.css" rel="stylesheet"></head>
 <body class="container">
 <!-- 1) render data from backend server side (see daggerok.react.ReactServerSideRenderingController.index) -->
-<div id="app">{{{html}}}</div>
+<div id="app">{{{data}}}</div>
+<div id="app">{{{posts}}}</div>
 <script src="{{springMacroRequestContext.request.contextPath}}/app.js"></script>
 <!-- 2) up and running dynamic part of application after it static initial page was loader -->
 <script type="text/javascript">

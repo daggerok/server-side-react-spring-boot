@@ -26,8 +26,8 @@ public class ReactServerSideRenderingController {
         this.objectMapper = objectMapper;
     }
 
-    @GetMapping("/")
     @SneakyThrows
+    @GetMapping({"/", "/404", "/not-found"})
     public String index(Model model) {
         val posts = postRestRepository.findAll();
         model.addAttribute("data", react.renderApp(posts));
