@@ -4,21 +4,22 @@ server-side-react-spring-boot [![build](https://travis-ci.org/daggerok/server-si
 build
 
 ```fish
-gradle ui build
+bash gradlew
 bash build/libs/*.jar
 ```
 
 backend development
 
 ```fish
-gradle bootRun
+./gradlew bootRun
 ```
 
 ui development
 
 ```fish
+./gradlew yarn_-i
+./gradlew yarn_build
+# but...
 cd ui/
-npm start
-npm run build
-npm run serve
+yarn start
 ```
