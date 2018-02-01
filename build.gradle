@@ -30,6 +30,7 @@ dependencies {
 defaultTasks "clean", "build"
 task ui(dependsOn: yarn_build)
 assemble.shouldRunAfter ui
+test.dependsOn ui
 
 node {
   download = true
