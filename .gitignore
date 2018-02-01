@@ -2,9 +2,7 @@ ui/node_modules
 src/main/resources/static
 out
 build
-gradle
 .gradle
-gradlew*
 **/.idea
 **/*.log*
 **/*.ipr
