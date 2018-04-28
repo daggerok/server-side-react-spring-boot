@@ -3,7 +3,7 @@ plugins {
   id "idea"
   id "eclipse"
   id "com.moowork.node" version "1.2.0"
-  id "org.springframework.boot" version "1.5.10.RELEASE"
+  id "org.springframework.boot" version "1.5.12.RELEASE"
 }
 
 group = "daggerok"
@@ -38,7 +38,7 @@ node {
 }
 
 task wrapper(type: Wrapper) {
-  gradleVersion = "4.5"
+  gradleVersion = "4.7"
   distributionType = "ALL"
 }
 
